@@ -35,9 +35,17 @@ Responsibilities:
 
 ## 🛠 Tools & Technologies
 
+### Business Analysis & Modeling
 - Draw.io
-- SQL
-- Jira
+
+### Database
+- SQL Server
+
+### System Understanding
+- ASP.NET MVC
+- C#
+
+### Documentation & Reporting
 - Microsoft Excel
 
 ---
