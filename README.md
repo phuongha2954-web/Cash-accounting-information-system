@@ -1,89 +1,100 @@
-# Cash Accounting Information System (CAIS)
+# Cash Accounting Information System (CAIS) at FPT IS
 
 ## 📌 Project Overview
-This project focuses on analyzing and designing a comprehensive web-based **Cash Accounting Information System** tailored for enterprise financial operations. The system bridges the gap between accounting regulations and technical execution, aimed at transforming manual voucher processing into an automated, real-time workflow.
+This project focuses on analyzing, designing, and building a comprehensive web-based **Cash Accounting Information System (CAIS)** tailored for the financial operations at **FPT IS Company Limited**. Developed in compliance with the **Circular 99/2025/TT-BTC** accounting regulations, the system bridges the gap between financial compliance and automated software execution.
 
-By streamlining cash tracking and general ledger updates, the system significantly improves operational efficiency, eliminates manual data-entry errors, and enhances accounting data integrity.
+The system streamlines enterprise cash management by transforming manual voucher processing into an automated, real-time workflow, minimizing data-entry errors, and resolving data latency in multi-unit tracking.
 
 ---
 
 ## 👩‍💼 My Role: Business Analyst / System Designer
-As the sole BA and System Designer for this graduation project, I was responsible for end-to-end system analysis, functional design, and quality assurance, including:
-- **Requirement Engineering:** Gathered business requirements and analyzed accounting workflows to define detailed functional specifications.
-- **System Architecture & Modeling:** Designed **20+ UML diagrams** to structure system behaviors and database structures.
-- **Process Automation Design:** Proposed **automated accounting entry logic** and real-time ledger synchronization.
-- **Quality Assurance:** Developed and executed **65+ test cases** to validate workflow accuracy and financial reporting correctness.
+As the author of this graduation thesis project, I managed the complete end-to-end system analysis and design lifecycle, including:
+- **Requirement Analysis:** Surveyed real-world cash receipt/payment and bank deposit workflows at FPT IS to establish functional and non-functional specifications.
+- **System Modeling:** Modeled system boundaries, actor interactions, and business workflows by creating **20+ UML diagrams**.
+- **Database Engineering:** Designed and structured a normalized relational database schema scaled for high-volume enterprise financial records.
+- **Quality Assurance:** Authored a comprehensive test plan and executed **65 test cases** (Unit, Integration, System, and Regression testing).
 
 ---
 
-## 🎯 System Core Objectives
-- **Automated Entry Logic:** Automatically generate corresponding Debit/Credit account entries based on pre-defined transaction categories, reducing manual accounting slip errors.
-- **Real-time Synchronization:** Instantly update cash books, ledgers, and financial summaries as soon as a transaction voucher is approved.
-- **Internal Control & Security:** Establish strict multi-level approval workflows for cash vouchers and implement a matrix permission system.
-- **Compliance Reporting:** Support the automated generation of legally compliant cash journals, general ledgers, and financial summaries.
+## 🎯 Core System Capabilities
+- **Automated Entry Logic:** Implemented pre-defined Debit/Credit mapping rules for over 15 transaction scenarios (e.g., cash sales, vendor payments, advances), reducing manual slip entry errors.
+- **Real-time Book Synchronization:** Automatically posts approved vouchers to General Ledgers, Cash Journals, and Cash Books, recalculating ledger balances instantly.
+- **Internal Control & Multi-Level Approval:** Enforced strict multi-stage digital approval workflows involving Accountants, Chief Accountants, and Directors to eliminate negative cash balance risks.
+- **Firm Banking Connection Capability:** Modeled to interface with electronic banking statements (GiayBao) for automated bank reconciliation.
 
 ---
 
 ## 🛠 Tools & Technologies
-- **Business Analysis & Modeling:** Draw.io (UML Diagrams, Workflow Architecture)
-- **Database Architecture:** SQL Server (ERD design, Relational database structure, Data query)
-- **System Framework:** ASP.NET MVC, C# (Object-Oriented system thinking, Web-based architecture design)
-- **Documentation & Reporting:** Microsoft Excel (Test case matrices, Master data modeling)
+- **Methodology:** Object-Oriented Analysis and Design (OOAD) with Unified Modeling Language (UML).
+- **Modeling & Design:** Draw.io (Use Case, Class, Sequence, and Activity Diagrams).
+- **Database Architecture:** Microsoft SQL Server (3NF Normalization, Relations, Stored Procedures, and Indexes).
+- **Development Framework:** ASP.NET MVC, C#.
+- **Frontend UI:** HTML5, CSS3, JavaScript, Bootstrap Framework.
+- **Documentation:** Microsoft Excel (Test case matrices and master data dictionary configuration).
 
 ---
 
-## 📊 Functional Modules
-The system architecture consists of **6 core modules**, working cohesively to handle enterprise cash workflows:
+## 📊 Functional Modules & Architecture
+The system consists of **6 functional modules** optimized to manage enterprise cash workflows seamlessly:
 
-| Module | Key Functions & BA Analytical Focus |
+| Module | Technical & Functional Description |
 |---|---|
-| **System Management** | Handles user authentication, security logs, and **Matrix Permissions** (e.g., Accountant vs. Chief Accountant approval rights). |
-| **Category Management** | Manages **Master Data** including chart of accounts (TK 111, TK 112), corporate partners, and standardized transaction reasons. |
-| **Opening Balance Management**| Initializes beginning balances for accounting periods, ensuring data consistency before a new fiscal cycle begins. |
-| **Transaction Management** | Core engine managing cash receipts/payments and voucher processing with integrated **Automated Entry Logic**. |
-| **Book Management** | Automatically records and maintains accounting books, general journals, and real-time transaction history. |
-| **Reporting Management** | Dynamically aggregates data to generate real-time accounting reports and accurate financial summaries. |
+| **System Management** | Handles secure user authentication, multi-factor login sessions, and **Matrix Permissions** (assigning roles: Administrator, Accountant, Chief Accountant). |
+| **Category Management** | Centralizes **Master Data Management** for chart of accounts (TK 111, 112), business partners (customers, vendors, employees), exchange rates, and linked banks. |
+| **Opening Balance Management** | Initializes beginning asset balances for accounting periods, guaranteeing data consistency before initiating a new fiscal cycle. |
+| **Transaction Management** | Executes core accounting transactions by generating cash receipts, cash payments, bank debit/credit notes, and automated entries. |
+| **Book Management** | Automatically compiles and maintains chronological transaction records, general journals, and cash ledgers. |
+| **Reporting Management** | Dynamically aggregates database calculations to generate dynamic reports like cash flow summaries, quick dashboards, and statutory financial reports. |
 
 ---
 
-## 📐 UML Diagrams & System Architecture
-*All diagrams are fully detailed inside the `diagrams` file.*
+## 📐 UML Diagrams & Database Schema
+*Full visual models and detailed functional specifications are compiled within the `/Documents` directory.*
 
-### 🔹 Use Case Diagram
-- **Analytical Focus:** Defined system boundaries and interactive roles for **4 key actors**: *Accountant (Lập phiếu), Chief Accountant (Kiểm tra), Director (Phê duyệt), and Auditor (Xem báo cáo)*.
-- **Key Use Cases:** Voucher Creation, Multi-stage Approval Workflow, Real-time Reporting.
+### 🔹 Use Case Modeling
+- **General Boundaries:** Modeled system access across **4 distinct actors**: *Accountant (Lập phiếu), Chief Accountant (Kiểm tra), Director (Phê duyệt), and Auditor (Xem báo cáo)*.
+- **Core Diagrams:** Use Case structures for System Management, Category Configurations, Voucher Processing, Ledger Book Management, and Financial Reporting.
 
-### 🔹 Activity & Sequence Diagrams
-- **Voucher Approval Flow:** Modeled the sequence of data passing from the UI Layer through the Controller Logic (checking balance thresholds to prevent negative cash balance exceptions) down to the Database Layer.
-- **Real-time Ledger Update:** Visualized the automated background triggers that update book ledgers simultaneously upon voucher validation.
+### 🔹 Behavioral Modeling (Sequence & Activity)
+- **Voucher Lifecycles:** Sequence diagrams map out the end-to-end data transfer layout from the UI Layer through the Controller Logic (validating balance thresholds to prevent negative fund anomalies) down to the SQL Database Layer.
+- **User Workflows:** Activity diagrams explicitly detail the step-by-step logic for data creation, modifications, backup operations, data recovery, and ledger reports generation.
 
-### 🔹 Database ERD (Entity Relationship Diagram)
-- Optimized a relational database structure with strict foreign key constraints linking `Transactions`, `Vouchers`, `Accounts_Dictionary`, and `Users` to ensure absolute transactional integrity.
-
----
-
-## 🖥 UI/UX Mockups
-- Designed clean, user-friendly forms for voucher entries with automated dropdown data pulled from Master Data categories.
-- Features dynamic dashboards for the **Reporting Management** module to visualize real-time cash flow statuses.
-
----
-
-## 🧪 Testing & User Acceptance Testing (UAT)
-To ensure the system's logic and reliability, a comprehensive test plan with **65+ test cases** was executed:
-- **Business Logic Testing:** Verified that automated journal entries correctly mapped Debit/Credit rules for over 15+ different cash transaction scenarios.
-- **Exception/Edge Case Handling:** Tested system reactions when attempting to approve a payment voucher that exceeded the current opening balance (System correctly blocked transaction and raised an alert).
-- **Data Integrity Testing:** Validated that database tables correctly rolled back transactions if an error occurred mid-process (ACID compliance).
+### 🔹 Database Physical Schema (Core Tables)
+The underlying database design consists of heavily linked relational tables enforced with strict foreign key constraints to support data integrity:
+- `NguoiDung`: Manages account credentials and permission scopes.
+- `DMTK`: Maps out account Hierarchies (MaTK, TenTK, CapTK, TKCapTren).
+- `DMDT`: Stores details for business partners linked by `NhomDT`.
+- `TaiKhoanNH` & `NganHang`: Handles company bank account references.
+- `BangTyGia` & `DMTienTe`: Handles exchange rate calculations for foreign currencies.
+- `PhieuTC` / `GiayBao` / `PhieuKT`: Acts as header tables for transactions.
+- `CTPhieu`: Handles transactional line items (Id, SoCT, TkNo, TkCo, SoTien, SoTienNT).
+- `BBKK` & `CTBBKK`: Evaluates actual physical inventory cash audits.
 
 ---
 
-## 📚 Key Learnings & Deliverables
-- **Academic Achievement:** Secured an **Excellent Grade (Điểm Giỏi)** for the graduation thesis at the Academy of Finance.
-- **BA Competencies:** Sharpened skills in translating complex financial regulations into clear, structured software functional specifications (SRS) and visual UML models.
-- **System Thinking:** Mastered the end-to-end Software Development Life Cycle (SDLC), from initial requirement gathering to comprehensive UAT design.
+## 🧪 Quality Assurance & Verification (UAT)
+A rigorous testing phase composed of **65 distinct test cases** was successfully executed to evaluate business logic accuracy:
+
+- **Unit Testing (20 Cases):** Validated individual module functionalities independently with a 100% success rate.
+- **Integration Testing (20 Cases):** Evaluated relational constraint mapping across foreign key dependencies (e.g., matching line details back to primary transaction headers).
+- **System & UAT Testing (15 Cases):** Simulated comprehensive business scenarios including workflow tracking from early payment requests up to formal cashier disbursements and bookkeeping ledger updates.
+- **Exception & Edge Case Auditing:** Verified that system triggers successfully throw alerts and block transaction validations when a payment request exceeds active opening asset balances.
+
+### 📈 Testing Performance Metrics
+- **Total Test Cases Executed:** 65
+- **Passed Cases:** 58 | **Failed Cases:** 7 (Minor UI anomalies & input data edge cases, all resolved)
+- **Final Success Rate:** 89.2% (Meeting project criteria for production deployment)
 
 ---
 
-## 📬 Contact & Deliverables Artifacts
-- **Project Documentation:** Complete specification documents and test plans can be found in the [`/Documents`](./Documents) folder.
+## 📚 Project Outcomes & Key Takeaways
+- **Academic Standard:** Awarded an **Excellent Grade ** by the defense council at the Academy of Finance.
+- **BA Proficiency:** Proven capability in capturing complex corporate accounting processes and translating them into structured, reliable software specifications and technical diagrams.
+- **SDLC Comprehension:** Mastered the structural phases of the Software Development Life Cycle, ensuring a cohesive fit between functional business goals and back-end database engines.
+
+---
+
+## 📬 Contact & Artifacts Directory
+- **Project Artifacts:** Full text specification papers, relational schemas, and comprehensive test case logs are securely categorized in the [`/Documents`](./Documents) repository directory.
 - **Email:** phuongha2954@gmail.com
 - **LinkedIn:** [linkedin.com/in/hatruong2004](https://www.linkedin.com/in/hatruong2004/)
