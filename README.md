@@ -95,6 +95,6 @@ A rigorous testing phase composed of **65 distinct test cases** was successfully
 ---
 
 ## 📬 Contact & Artifacts Directory
-- **Project Artifacts:** Full text specification papers, relational schemas, and comprehensive test case logs are securely categorized in the [`/Documents`](./Documents) repository directory.
+- **Project Artifacts:** Full text specification papers, relational schemas, and comprehensive test case logs are securely categorized in the [`/docs`](./docs) repository directory.
 - **Email:** phuongha2954@gmail.com
 - **LinkedIn:** [linkedin.com/in/hatruong2004](https://www.linkedin.com/in/hatruong2004/)
